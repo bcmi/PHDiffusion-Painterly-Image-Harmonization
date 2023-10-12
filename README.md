@@ -20,7 +20,7 @@ This is the official repository for the following paper:
         ```
 2.  Download Models
 
-    Please download the following models to the `pretrained_model/` folder.
+    Please download the following models to the `pretrained_models/` folder.
 
     *   sd-v1-4. Our model is based on Stable Diffusion v1.4.&#x20;
     *   Our pretrained model. You can download **one** of them for testing. The main difference between the two models is that **PHDiffusionWithoutRes** removes the residual structure in its adapter, while **PHDiffusionWithRes** retains it. Note that **PHDiffusionWithoutRes** perform better in some dense texture styles, learning textures that are more similar to the original ones. While **PHDiffusionWithRes** can preserve better content. You can make selections based on your needs.
