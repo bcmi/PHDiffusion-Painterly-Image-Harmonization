@@ -22,7 +22,7 @@ This is the official repository for the following paper:
 
     Please download the following models to the `pretrained_models/` folder.
 
-    *   sd-v1-4. Our model is based on Stable Diffusion v1.4.&#x20;
+    *   [sd-v1-4](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/blob/main/sd-v1-4.ckpt). Our model is based on Stable Diffusion v1.4.&#x20;
     *   Our pretrained model. You can download **one** of them for testing. The main difference between the two models is that **PHDiffusionWithoutRes** removes the residual structure in its adapter, while **PHDiffusionWithRes** retains it. Note that **PHDiffusionWithoutRes** perform better in some dense texture styles, learning textures that are more similar to the original ones. While **PHDiffusionWithRes** can preserve better content. You can make selections based on your needs.
 
         *   [PHDiffusionWithoutRes](https://drive.google.com/file/d/1mP9fUXF58jJGOB28YB0hoi1yK-L5xOj_/view?usp=sharing). The best checkpoint of our adapter **without** residual and dual encoder fusion module.
