@@ -271,7 +271,7 @@ class Style_Loss(nn.Module):
         return style_contrastive_loss
 
 
-    def get_contrastive_loss(self, style, mask, pred,style_comparison):
+    def get_contrastive_loss_one_batch(self, style, mask, pred,style_comparison):
 
         style_feats = self.encode_with_small_intermediate(style)
 
@@ -293,7 +293,24 @@ class Style_Loss(nn.Module):
 
         return loss_contra
 
+    def get_contrastive_loss(self, style, mask, pred,style_comparison):
 
+        style_feats = self.encode_with_small_intermediate(style)
+        fine_feats = self.encode_with_small_intermediate(pred)
+
+        loss_contra=[]
+        for j in range(style.shape[0]):
+            style_comparison_cur=style_comparison[j]
+            style_comparison_feats=[]
+            for i in range(self.compare_num):
+                style_comparison_feats.append(self.encode_with_small_intermediate(style_comparison_cur[i:i+1]))
+            style_comparison_feats=torch.cat(style_comparison_feats,dim=0)  
+            cur_loss_contra=self.calc_contrastive_loss(style_feats[j].unsqueeze(0),style_comparison_feats,fine_feats[j].unsqueeze(0),mask[j].unsqueeze(0))
+            loss_contra.append(cur_loss_contra)
+            
+        loss_contra=torch.mean(torch.stack(loss_contra,dim=0))
+
+        return loss_contra
 
     def get_style_loss(self,style, mask, pred):
 
