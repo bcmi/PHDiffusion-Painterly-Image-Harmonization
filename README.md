@@ -10,6 +10,8 @@ This is the official repository for the following paper:
 > Lingxiao Lu, Jiangtong Li, Junyan Cao, Li Niu, Liqing Zhang<br>
 > Accepted by **ACM MM 2023**.
 
+**Our PHDiffusion is the first diffusion-based painterly image harmonization method, which can significantly outperform GAN-based methods when the background has dense textures or abstract style.**
+
 ### Code and model
 
 1.  Dependencies
