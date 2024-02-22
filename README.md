@@ -31,15 +31,36 @@ This is the official repository for the following paper:
         *   [PHDiffusionWithRes](https://drive.google.com/file/d/1cJy4N7kzEcjsp5c__--ymmGTjvL2w1Cs/view?usp=sharing). The best checkpoint of our adapter **with** residual and dual encoder fusion module.
     *   [VGG19](https://drive.google.com/file/d/1pZpi45kJi-vnTfQIPrin69MLsUJO0Y_x/view?usp=sharing)(Optional, only needed for training). Loss is calculated with the help of VGG.
 
+3. Training Data
+   
+   **Data Acquisition**
+   
+   We have two benchmark datasets: COCO and WikiArt.
 
-3.  Train
+   * COCO is a large-scale photograph dataset with instance segmentation annotation for 80 different object categories.
+   * WikiArt is a large-scale digital art dataset consisting of 27 distinct styles.
+
+	These datasets are used to create composite images by combining photographic foreground objects from COCO with painterly backgrounds from WikiArt.
+
+
+	**Data Processing**
+
+	* To obtain properly sized and high-resolution foreground objects, we select 9,100 foreground images from the COCO dataset with a foreground ratio between 0.05 and 0.3, and a width and height of at least 480.
+	* We choose 37,931 background images from the WikiArt dataset with a width and height of at least 512.
+
+	During training, we use instance annotation to extract the foreground objects from the foreground images and place them onto randomly chosen painterly backgrounds from the background images, resulting in 37,931 composite images in each epoch.
+	Finally, all composite images are resized to 512 × 512 for training. This process can produce composite images with conflicting visual elements.
+
+
+
+4.  Train
 
     You can run this to train adapter and dual encoder fusion module:
 
     ```bash
     CUDA_VISIBLE_DEVICES="0,1" python -m torch.distributed.launch --nproc_per_node 2 train.py
     ```
-4.  Test
+5.  Test
 
     You can run this to test using adapter with residual:
 
