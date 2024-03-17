@@ -9,6 +9,8 @@ This is the official repository for the following paper:
 
 **Our PHDiffusion is the first diffusion-based painterly image harmonization method, which can significantly outperform GAN-based methods when the background has dense textures or abstract style.**
 
+**Our PHDiffusion has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
+
 ### Code and model
 
 1.  Dependencies
