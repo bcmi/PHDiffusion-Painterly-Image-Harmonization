@@ -11,6 +11,10 @@ This is the official repository for the following paper:
 
 **Our PHDiffusion has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
 
+In simple cases, our GAN-based [PHDNet](https://github.com/bcmi/PHDNet-Painterly-Image-Harmonization/blob/main/README.md) is sufficiently effective and much more efficient. 
+
+Sometimes setting the background style as the target style is not reasonable, this problem has been solved in our [ArtoPIH](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization). 
+
 ### Code and model
 
 1.  Dependencies
