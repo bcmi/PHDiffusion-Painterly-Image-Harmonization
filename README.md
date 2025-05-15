@@ -33,9 +33,9 @@ Sometimes setting the background style as the target style is not reasonable, th
     *   [sd-v1-4](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/blob/main/sd-v1-4.ckpt). Our model is based on Stable Diffusion v1.4.&#x20;
     *   Our pretrained model. You can download **one** of them for testing. The main difference between the two models is that **PHDiffusionWithoutRes** removes the residual structure in its adapter, while **PHDiffusionWithRes** retains it. Note that **PHDiffusionWithoutRes** perform better in some dense texture styles, learning textures that are more similar to the original ones. While **PHDiffusionWithRes** can preserve better content. You can make selections based on your needs.
 
-        *   [PHDiffusionWithoutRes](https://drive.google.com/file/d/1mP9fUXF58jJGOB28YB0hoi1yK-L5xOj_/view?usp=sharing). The best checkpoint of our adapter **without** residual and dual encoder fusion module.
-        *   [PHDiffusionWithRes](https://drive.google.com/file/d/1cJy4N7kzEcjsp5c__--ymmGTjvL2w1Cs/view?usp=sharing). The best checkpoint of our adapter **with** residual and dual encoder fusion module.
-    *   [VGG19](https://drive.google.com/file/d/1pZpi45kJi-vnTfQIPrin69MLsUJO0Y_x/view?usp=sharing)(Optional, only needed for training). Loss is calculated with the help of VGG.
+        *   PHDiffusionWithoutRes [[BaiduCloud]](https://pan.baidu.com/s/1kGT3vQPKCnTWFI4KmoREcg?pwd=nwgf)(code: nwgf): The best checkpoint of our adapter **without** residual and dual encoder fusion module.
+        *   PHDiffusionWithRes [[BaiduCloud]](https://pan.baidu.com/s/1pLHgAD_JA8xntHid8sOqGg?pwd=b9b2)(code: b9b2): The best checkpoint of our adapter **with** residual and dual encoder fusion module.
+    *   VGG19 [[BaiduCloud]](https://pan.baidu.com/s/1ISofkKd0C4Bv89rVoRyPbg?pwd=ffie)(code: ffie): Only needed for training. Loss is calculated with the help of VGG.
 
 3. Training Data
    
