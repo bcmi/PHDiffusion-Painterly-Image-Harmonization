@@ -15,6 +15,10 @@ In simple cases, our GAN-based [PHDNet](https://github.com/bcmi/PHDNet-Painterly
 
 Sometimes setting the background style as the target style is not reasonable, this problem has been solved in our [ArtoPIH](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization). 
 
+### Online Demo
+
+Try this [online demo](http://libcom.ustcnewly.com/) for image composition and have fun!
+
 ### Code and model
 
 1.  Dependencies
