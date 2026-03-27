@@ -42,7 +42,7 @@ Our PHDiffusion has been integrated into [libcom](https://github.com/bcmi/libcom
         *   PHDiffusionWithoutRes [[BaiduCloud]](https://pan.baidu.com/s/1kGT3vQPKCnTWFI4KmoREcg?pwd=nwgf)(code: nwgf) [[Dropbox]](https://www.dropbox.com/scl/fi/3euq10guebsjrne8fb7rx/PHDiffusion.pth?rlkey=7eo6ciki29tx35mf3a2fzn709&st=oq2arlyx&dl=0): The best checkpoint of our adapter **without** residual and dual encoder fusion module.
         *   PHDiffusionWithRes [[BaiduCloud]](https://pan.baidu.com/s/1pLHgAD_JA8xntHid8sOqGg?pwd=b9b2)(code: b9b2) [[Dropbox]](https://www.dropbox.com/scl/fi/g7qierlm6ir2vvuza9taa/PHDiffusionWithRes.pth?rlkey=b0ovcjdcslr25gflkelmkxos1&st=nymeadna&dl=0): The best checkpoint of our adapter **with** residual and dual encoder fusion module.
           
-    	We also finetune PHDiffusionWithRes with our [Arto](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization) dataset, so that the model is more suitable for object harmonization without significantly changing the intrinsic color of foreground object (e.g., from red to green). The checkpoint can be downloaded from [[BaiduCloud]](https://pan.baidu.com/s/12TWHleLCrJpn9uYYUxTjqg?pwd=qhht) or [[Dropbox]](https://www.dropbox.com/scl/fi/en52qckd4mj61qdaa30rh/PHDiffusionWithRes_obj.pth?rlkey=n5rmzkgt2m9naigc44xfprd2o&st=ivvdkyjo&dl=0). 
+    	We also finetune PHDiffusionWithRes with our [Arto](https://github.com/bcmi/ArtoPIH-Painterly-Image-Harmonization) dataset, so that the model is more suitable for object harmonization without significantly changing the intrinsic color of foreground object (e.g., from red to green). The checkpoint can be downloaded from [[BaiduCloud]](https://pan.baidu.com/s/12TWHleLCrJpn9uYYUxTjqg?pwd=qhht) or [[Dropbox]](https://www.dropbox.com/scl/fi/en52qckd4mj61qdaa30rh/PHDiffusionWithRes_obj.pth?rlkey=n5rmzkgt2m9naigc44xfprd2o&st=ivvdkyjo&dl=0). We name this model PHDiffusionWithRes_obj.
     
     *   VGG19 [[BaiduCloud]](https://pan.baidu.com/s/1ISofkKd0C4Bv89rVoRyPbg?pwd=ffie)(code: ffie) [[Dropbox]](https://www.dropbox.com/scl/fi/4j3u55a2s7rql08em3i5g/vgg_normalised.pth?rlkey=pv24g6i1k6puqq7z4jwsd2rcx&st=rrac5w0b&dl=0): Only needed for training. Loss is calculated with the help of VGG.
   
@@ -102,6 +102,13 @@ Our method can significantly outperform GAN-based methods when the background ha
 <p align="center">  
   <img src="./examples/results2.jpg" width="90%" />
 </p>
+
+We also compare PHDiffusionWithRes with PHDiffusionWithRes_obj.
+
+<p align="center">  
+  <img src="./examples/cmp_obj.jpg" width="100%" />
+</p>
+
 
 ## Other Resources
 
